@@ -1,6 +1,6 @@
 # Finnerio Music DB Layer
 
-This repo handles migrations and database operations.
+This servie handles migrations and database operations.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ This repo handles migrations and database operations.
 
 ## Installation
 
-Run your instance of PSQL or using docker-compose.
+Run your instance of PSQL or docker pull image.
 
 ## Usage
 
@@ -23,7 +23,7 @@ Run your instance of PSQL or using docker-compose.
 
 ## Docker
 
-- docker run -v migrations:/migrations --net=backend migrate/migrate -path=/migrations/ -database postgres://172.26.0.1:5432/docker up
+- docker run -v $HOME/finnerio-db-layer/migrations:/migrations --net=backend migrate/migrate -path=/migrations -database "postgres://postgres:docker@172.26.0.1:5432/postgres?sslmode=disable" up
 
 ## Support
 
